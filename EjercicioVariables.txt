@@ -1,0 +1,104 @@
+******************************************
+Ejercicio Variables
+******************************************
+
+//Ej1. Calcular el perametro y area de un rectangulo dada su base y su altura.
+var altura = 5
+var base = 8
+
+var area = base * altura
+var perimetro = 2*(base+altura)
+
+print("El area es: " , area)
+print("El perimetro es: " , perimetro)
+
+//Ej2. Dados los catetos de un triangulo rectangulo, calcular su hipotenusa. funcion sqrt()\
+//Nota: en online no funciona\ hay que "import UIKit"
+var cateto1 = 4.0
+var cateto2 = 3.0
+
+var hipotenusa = sqrt((cateto1 * cateto1) + (cateto2 * cateto2))
+
+print("La hipotenusa es: " , hipotenusa)
+
+//Ej3. Dados dos números, mostrar la suma, resta, division y multiplicacion de ambos.\
+var num1 = 3.0
+var num2 = 7.0
+
+var suma = num1 + num2
+var resta = 0.0
+var division = 0.0
+if (num1<num2){
+    resta = num2 - num1
+}else{
+    resta = num1 - num2
+}
+
+if (num1<num2){
+    division = num2 / num1
+}else{
+    division = num1 / num2
+}
+var multiplicacion = num1 * num2
+
+print("La suma es: " , suma)
+print("La resta es: " , resta)
+print("La division es: " , division)
+print("La multiplicacion es: " , multiplicacion)
+
+//Ej4. Escribir un programa que convierta un valor dado en grados Fahrenheit a grados Celsius.
+var Celsius = 34.0
+var Fahrenheit = 74.0
+
+var F_a_C = (Fahrenheit - 32) * 5 / 9
+var C_a_F = Celsius * 9 / 5 + 32
+
+print("De Fahrenheit a Celsius es: " , F_a_C)
+print("De Celsius a Fahrenheit es: " , C_a_F)
+
+//Ej5. Calcular la media de tres números pedidos por teclado\
+var num_1 = 4.0
+var num_2 = 7.0
+var num_3 = 8.0
+
+var media = (num_1 + num_2 + num_3) / 3
+
+print("La media es: " , media)
+
+/*Ej6. Un vendedor recibe un sueldo base mas un 10% extra por comision de sus ventas, \
+ el vendedor desea saber cuanto dinero obtendrá por concepto de comisiones por \
+ en cuenta su sueldo base y comisiones.\*/
+var sueldo : Double = 2500
+var sueldo_total = sueldo - sueldo * 0.1
+
+print("El sueldo final es: " , sueldo_total)
+
+//Ej7. Un alumno desea saber cual será su calificación final en la materia de IOS\
+//    Dicha calificación se compone de los siguientes porcentajes:\
+//    * 55% del promedio de sus tres calificaciones parciales.\
+//    * 30% de la calificación del examen final.\
+//    * 15% de la calificación de un trabajo final.\
+var parcial1 = 6.7 , parcial2 = 7.1 , parcial3 = 5.0
+var examen_final = 7.6
+var trabajo = 4.3
+var media2 = (parcial1 + parcial2 + parcial3) / 3
+
+var nota_final = (media2 * 0.55) + (examen_final * 0.3) + (trabajo * 0.15)
+
+print("La nota final es: " , nota_final)
+
+ //Ej8. Escribir un algoritmo para calcular la nota final de un estudiante, considerando que: por cada respuesta correcta 5 puntos, por una incorrecta -1 y por respuestas en 0
+var nota = 0
+var correctas = 7
+var incorrectas = 5
+
+var total = (correctas * 5) + (incorrectas * (-1))
+
+print("La nota Final es: " , total)
+ //Ej9. Calcula el sueldo de un trabajador, cuyo valor es su sueldo base mas un numero de horas extra trabajadas, pero teniendo en cuenta que el dicho numero de horas puede ser nulo
+var sueldo_base = 1600.0
+var horas : Double! = 4 
+var precio_horas = (horas ?? 0) * 8
+var total_sueldo = sueldo_base + precio_horas
+
+print("Su sueldo es: " , total_sueldo)

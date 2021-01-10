@@ -1,0 +1,89 @@
+//Ejercicio 1.
+//Escribir un programa que, dado una cadena de texto con un mes del año, 
+//imprima el número de días que tiene el mes correspondiente. 
+//El programa tiene que estar preparado para aceptar que la cadena de string pueda ser nulo, 
+//y en caso de que sea nulo, el programa escribirá por pantalla que no puede mostrar los días de mes correspondiente.
+
+var mes:String! = "Marzo"
+
+switch mes{
+case "Enero":
+    print(31)
+case "Febrero":
+    print(28)
+case "Marzo":
+    print(31)
+case "Abril":
+    print(30)
+case "Mayo":
+    print(31)
+case "Junio":
+    print(30)
+case "Julio":
+    print(31)
+case "Agosto":
+    print(31)
+case "Septiembre":
+    print(30)
+case "Octubre":
+    print(31)
+case "Nombiembre":
+    print(30)
+case "Diciembre":
+    print(31)
+default:
+    print("Es nulo")
+}
+
+//Ejercicio 2.
+//Realizar las siguientes tareas
+//1)	Crear un diccionario de tipo Int:Double, declarando el tipo en tiempo de compilación. La clave representa un ID y el valor una edad
+//2)	Rellenar el diccionario con 3 claves y valores diferentes
+//3)	Mediante bucles, pasar los valores del diccionario a un array y las claves del diccionario a otro array diferente
+//4)	Recorrer ambos arrays y mostrar los resultados por pantalla
+
+var diccionario : [Int:Double] = [:]
+
+diccionario[1] = 43.2
+diccionario[2] = 33.0
+diccionario[3] = 21.9
+
+print(diccionario)
+
+var dicValores = [Double]()
+var dicId = [Int]()
+
+for valores in diccionario.values{
+    dicValores.append(valores)
+}
+for id in diccionario.keys{
+    dicId.append(id)
+}
+
+print("Array IDs")
+for i in dicId{
+    print(i)
+}
+print("Array Valores")
+for j in dicValores{
+    print(j)
+}
+
+//Ejercicio 3.
+//Realizar una función que reciba un array de Strings como parámetros de entrada. 
+//Dicha función devolverá dos valores, uno será el número de Strings que tenía el array y 
+//el otro será la cadena con mayor número de caracteres del array.
+
+func miFuncion(array: [String]) -> (numeroString: Int, masCaracteres:String){
+    let size = array.count
+    var mayor = array[0]
+    for valor in array{
+        if mayor < valor{
+            mayor = valor
+        }
+    }
+    return (size , mayor)
+}
+let bounds = miFuncion(array: ["hola","que tal","adios"])
+print(bounds.numeroString)
+print(bounds.masCaracteres)
