@@ -1,0 +1,43 @@
+import UIKit
+
+class Ordenata{
+    var precio : Int = 0
+    var nombre : String = ""
+    var ram = Ram()
+    var procesador = Procesador()
+    var almacenamiento = Almacenamiento()
+    var tarjetaGrafica = Grafica()
+}
+class Ram{
+    var capacidad = "8Gb"
+    var fabricante = "Sisors"
+    var rgb = "Si"
+}
+class Procesador{
+    var velocidad = "2,1GHz"
+    var cores = 21
+    var hilos = 4
+    var fabricante = "Air"
+}
+class Almacenamiento{
+    var capacidad = "512Gb"
+    var fabricante = "Car"
+    var unidad = "SSD"
+}
+class Grafica{
+    var consumo = 1080
+    var cores = 13
+    var velocidad = "3,2GHz"
+}
+var ram2 = Ram()
+var p = Procesador()
+var a = Almacenamiento()
+var g = Grafica()
+var pc = Ordenata()
+pc.precio = 700
+pc.nombre = "El mejor"
+pc.ram = ram2
+pc.procesador = p
+pc.almacenamiento = a
+pc.tarjetaGrafica = g
+print(pc.precio,pc.nombre,pc.ram.capacidad,pc.ram.fabricante,pc.ram.rgb,pc.procesador.cores,pc.procesador.fabricante,pc.procesador.hilos,pc.procesador.velocidad,pc.almacenamiento.unidad,pc.almacenamiento.capacidad,pc.almacenamiento.fabricante,pc.tarjetaGrafica.velocidad,pc.tarjetaGrafica.consumo,pc.tarjetaGrafica.cores)
